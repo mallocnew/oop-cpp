@@ -2,8 +2,8 @@
 // Author: easytojoin@163.com (jok)
 
 #include <iostream>
+#include <mutex>   // NOLINT
 #include <thread>  // NOLINT
-#include <mutex>  // NOLINT
 
 class Singleton {
  public:
@@ -37,9 +37,7 @@ class TSafeSingleton {
   }
 
  protected:
-  TSafeSingleton() {
-    std::cout << "New instance: " << this << "\n";
-  }
+  TSafeSingleton() { std::cout << "New instance: " << this << "\n"; }
 
  private:
   static TSafeSingleton* instance_;
