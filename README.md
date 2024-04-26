@@ -2,3 +2,4 @@
 
 - [Singleton](./singleton.cc)
 - [Strategy](./strategy.cc)
+- [Observer](./observer/Observer.md)
