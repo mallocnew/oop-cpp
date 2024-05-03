@@ -4,16 +4,16 @@
 classDiagram
 direction LR
 class Singleton {
- + getInstance() Singleton*$
+ + getInstance() shared_ptr~Singleton~$
  # Singleton()
- - Singleton* instance_$
+ - shared_ptr~Singleton~ instance_$
 }
 Singleton "1"*--"1" Singleton
 
 class TSafeSingleton {
- + getInstance() TSafeSingleton*$
+ + getInstance() shared_ptr~TSafeSingleton~$
  # TSafeSingleton()
- - TSafeSingleton* instance_$
+ - shared_ptr~TSafeSingleton~ instance_$
  - mutex m_$
 }
 TSafeSingleton "1"*--"1" TSafeSingleton
